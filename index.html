@@ -112,8 +112,8 @@
                                 <input id="quote-name" type="text" placeholder="Full Name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brandBlue focus:border-transparent outline-none transition">
                             </div>
                             <div>
-                                <label class="sr-only">Phone Number</label>
-                                <input id="quote-phone" type="tel" placeholder="Phone Number" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brandBlue focus:border-transparent outline-none transition">
+                                <label class="sr-only">Location</label>
+                                <input id="quote-location" type="text" placeholder="Location (City or Zip Code)" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brandBlue focus:border-transparent outline-none transition">
                             </div>
                             <div>
                                 <label class="sr-only">Project Type</label>
@@ -442,10 +442,10 @@
     <script>
         function sendSMS() {
             const name = document.getElementById('quote-name').value || 'Customer';
-            const phone = document.getElementById('quote-phone').value || 'Not provided';
+            const location = document.getElementById('quote-location').value || 'Not provided';
             const type = document.getElementById('quote-type').value;
             
-            const message = `Hi JS Drywall! I would like to request a quote.\n\nName: ${name}\nPhone: ${phone}\nProject: ${type}`;
+            const message = `Hi JS Drywall! I would like to request a quote.\n\nName: ${name}\nLocation: ${location}\nProject: ${type}`;
             
             // Handle differences between iOS and Android sms: link formatting
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
